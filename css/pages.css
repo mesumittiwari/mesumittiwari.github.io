@@ -1,0 +1,8 @@
+.deep-page { padding-top: 120px; }
+.deep-page main { min-height:100vh; }
+.deep-hero { min-height:65svh; display:grid; align-items:end; padding:80px 0; border-bottom:1px solid var(--border); }
+.deep-hero h1 { margin:0; font-size:clamp(4rem,10vw,11rem); line-height:.8; }
+.deep-hero p:not(.eyebrow) { max-width:650px; margin-top:32px; color:var(--text-2); line-height:1.8; }
+.back-link { position:fixed; top:95px; left:var(--gutter); z-index:45; color:var(--muted); font:500 .62rem/1 "JetBrains Mono",monospace; text-transform:uppercase; letter-spacing:.08em; transition:color .2s ease; }
+.back-link:hover { color:var(--text); }
+.page-content { padding:var(--section-pad) 0; }

@@ -1,0 +1,52 @@
+-<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projects — Sumit Tiwari</title>
+<script>document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")||(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/dedicated.css"><link rel="stylesheet" href="../css/responsive.css">
+<style>
+.projects-hero{min-height:75svh;padding:150px 0 85px;display:flex;align-items:end;border-bottom:1px solid var(--border)}.projects-hero h1{font-size:clamp(5rem,14vw,14rem);line-height:.88;letter-spacing:-.1em;margin:0}.projects-hero h1 .muted{display:inline-block;margin-top:.04em;}.projects-hero p{max-width:650px;margin-top:42px;color:var(--tet-2);line-height:1.8}.featured{padding:var(--section-pad) 0;border-bottom:1px solid var(--border)}.featured-card{display:grid;grid-template-columns:1.1fr .9fr;min-height:620px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface);transition:.4s ease;text-decoration:none;color:inherit}.featured-card:hover{border-color:var(--accent);box-shadow:0 25px 90px rgba(var(--accent-rgb),.08);transform:translateY(-5px)}.feature-copy{padding:55px;display:flex;flex-direction:column;justify-content:space-between}.feature-copy h2{font-size:clamp(4rem,8vw,8rem);line-height:.75;letter-spacing:-.08em;margin:35px 0}.feature-copy p{max-width:560px;color:var(--text-2);line-height:1.8}.feature-visual{background:var(--surface-2);position:relative;display:grid;place-items:center;overflow:hidden}.feature-visual:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:55px 55px;opacity:.25}.redis-orb{width:230px;height:230px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 90px rgba(var(--accent-rgb),.12);animation:pulse 4s ease-in-out infinite}.redis-orb:before,.redis-orb:after{content:"";position:absolute;border:1px solid var(--border-strong);border-radius:50%}.redis-orb:before{inset:25px}.redis-orb:after{inset:-35px;opacity:.5}.redis-orb span{font:600 .75rem/1 "JetBrains Mono",monospace;letter-spacing:.1em}@keyframes pulse{50%{transform:scale(1.03)}}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.project-card{min-height:390px;padding:32px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);display:flex;flex-direction:column;justify-content:space-between;transition:.35s ease;text-decoration:none;color:inherit}.project-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:var(--glow)}.project-card h3{font-size:clamp(3rem,6vw,6rem);line-height:.75;letter-spacing:-.08em;margin:30px 0}.project-card p{max-width:540px;color:var(--text-2);line-height:1.7}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{padding:7px 9px;border:1px solid var(--border-strong);border-radius:99px;color:var(--muted);font:500 .52rem/1 "JetBrains Mono",monospace}
+@media(max-width:700px){.featured-card,.project-grid{grid-template-columns:1fr}.feature-visual{min-height:350px}.feature-copy{padding:30px}}
+</style><link rel="stylesheet" href="../css/responsive-fix.css">
+<style id="projects-hero-overlap-fix">
+/* Phase 13 — Projects hero title collision fix */
+.project-page-hero h1,
+.page-hero h1 {
+  line-height: 0.88;
+  overflow: visible;
+}
+.projects-hero h1 .muted{
+    display:inline-block;
+    margin-top:.04em;
+}
+.project-page-hero h1 .muted,
+.page-hero h1 .muted {
+  display: block;
+  margin-top: 0.035em;
+}
+@media (max-width: 1100px) {
+  .project-page-hero h1,
+  .page-hero h1 {
+    line-height: 0.9;
+  }
+}
+@media (max-width: 700px) {
+  .project-page-hero h1,
+  .page-hero h1 {
+    font-size: clamp(3.4rem, 15vw, 6.2rem);
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+  }
+}
+</style>
+</head>
+<body class="deep-page page-shell"><header class="site-nav scrolled"><a class="brand" href="../index.html"><span class="brand-mark">ST</span><span class="brand-name">SUMIT TIWARI</span></a><div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Toggle theme"><span>☾</span><span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span><span>☼</span></button></div></header>
+<a class="back-link interactive" href="../index.html" data-back-home>Back to previous page</a><main>
+<section class="projects-hero"><div class="container"><p class="eyebrow">PROJECTS / 01</p><h1>THINGS<br><span class="muted">I BUILT.</span></h1><p>Projects are experiments in understanding. The strongest one is the system I built to make networking, concurrency and persistence tangible.</p></div></section>
+<section class="featured"><div class="container"><p class="section-label">01 / FEATURED SYSTEM</p><a class="featured-card interactive" href="projects/mini-redis.html" data-page-link style="margin-top:40px"><div class="feature-copy"><div><div class="tags"><span>C++</span><span>POSIX SOCKETS</span><span>MULTITHREADING</span></div><h2>MINI-<br><span class="muted">REDIS.</span></h2><p>A persistent, multithreaded key-value store built from scratch. TCP networking, shared state, TTL and snapshot persistence in one engineering case study.</p></div><span class="button button-primary project-card-cta">Open case study <span>↗</span></span></div><div class="feature-visual"><div class="redis-orb"><span>KEY / VALUE</span></div></div></a></div></section>
+<section class="content-section"><div class="container"><p class="section-label">02 / OTHER BUILDS</p><div class="project-grid" style="margin-top:40px">
+<a class="project-card interactive" href="projects/meetscribe.html" data-page-link><div><div class="tags"><span>FASTAPI</span><span>REACT</span><span>WHISPER</span></div><h3>MEET<br><span class="muted">SCRIBE.</span></h3><p>Meeting recordings → transcription → structured insights → actionable exports and delivery.</p></div><span class="button button-outline project-card-cta">Open case study <span>↗</span></span></a>
+<a class="project-card interactive" href="projects/pitchpilot.html" data-page-link><div><div class="tags"><span>LLM</span><span>LANGCHAIN</span><span>GROQ</span></div><h3>PITCH<br><span class="muted">PILOT.</span></h3><p>A focused AI workflow experiment for generating context-aware cold email drafts.</p></div><span class="button button-outline project-card-cta">Open case study <span>↗</span></span></a>
+<a class="project-card interactive" href="projects/craft-resume.html" data-page-link><div><div class="tags"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></div><h3>CRAFT.<br><span class="muted">RESUME</span></h3><p>A resume-builder product with real-time preview and PDF export.</p></div><span class="button button-outline project-card-cta">Open case study <span>↗</span></span></a>
+</div></div></section></main>
+<script src="../js/theme.js"></script><script src="../js/interactions.js"></script><script src="../js/page-transition.js"></script></body></html>

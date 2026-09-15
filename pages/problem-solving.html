@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Problem Solving — Sumit Tiwari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css"><link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/navigation.css"><link rel="stylesheet" href="../css/dedicated.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<style>
+.problem-hero{min-height:84svh;padding:150px 0 80px;display:flex;align-items:end;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.problem-hero:after{content:"";position:absolute;right:-12vw;bottom:-20vw;width:48vw;height:48vw;border-radius:50%;background:radial-gradient(circle,rgba(var(--accent-rgb),.10),transparent 68%);pointer-events:none}
+.problem-hero h1{font-size:clamp(4.6rem,12vw,12rem);line-height:.82;letter-spacing:-.075em;margin:0;position:relative;z-index:1}
+.problem-hero .lead{max-width:700px;margin:42px 0 0;color:var(--text-2);font-size:1.05rem;line-height:1.8;position:relative;z-index:1}
+.problem-stat{font:700 clamp(5rem,12vw,11rem)/.8 "Inter",sans-serif;letter-spacing:-.08em;color:var(--text)}
+.pattern-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pattern{padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);transition:.3s ease}
+.pattern:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--glow)}
+.pattern b{font:600 .62rem/1 "JetBrains Mono",monospace;color:var(--accent)}
+.pattern h3{font-size:1.7rem;margin:24px 0 10px}.pattern p{color:var(--text-2);line-height:1.7;margin:0}
+@media(max-width:700px){.problem-hero{min-height:76svh}.pattern-grid{grid-template-columns:1fr}}
+/* PHASE 11 phone containment */
+@media(max-width:700px){
+  .problem-hero{width:100%;min-width:0}
+  .problem-hero .container{width:calc(100% - 36px);max-width:1440px;margin-inline:auto;min-width:0}
+  .problem-hero h1{max-width:100%}
+  .problem-stat{max-width:100%;overflow:hidden}
+}
+</style>
+<link rel="stylesheet" href="../css/responsive-fix.css">
+</head>
+<body class="dedicated-page">
+<div class="page-noise"></div><div class="cursor-glow"></div>
+<header class="site-nav scrolled">
+<a class="brand" href="../index.html"><span class="brand-mark">ST</span><span class="brand-name">SUMIT TIWARI</span></a>
+<div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Toggle theme"><span>☾</span><span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span><span>☼</span></button></div>
+</header>
+<a class="back-link interactive" href="../index.html" data-back-home>Back to previous page</a>
+<main>
+<section class="problem-hero"><div class="container">
+<p class="eyebrow">PROBLEM SOLVING / 01</p>
+<h1>THINK.<br><span class="muted">DECOMPOSE.</span><br>SOLVE.</h1>
+<p class="lead">Problem solving is the foundation behind how I approach engineering: understand the constraints, find the right model, choose the right data structures, prove the approach, then optimize the implementation.</p>
+</div><span class="page-number">DEDICATED PAGE</span></section>
+<section class="content-section"><div class="container content-grid">
+<div class="section-label">01 / TRACK RECORD</div><div><div class="problem-stat">600+</div>
+<span style="font:500 .65rem/1.5 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--muted)">DSA PROBLEMS SOLVED IN C++</span>
+<p class="body-copy" style="margin-top:34px">Consistent practice in C++ has built the habit of looking for constraints, patterns, invariants and complexity trade-offs before writing the final code.</p></div>
+</div></section>
+<section class="content-section"><div class="container"><p class="section-label">02 / MY PROCESS</p>
+<div class="pattern-grid" style="margin-top:48px">
+<article class="pattern"><b>01</b><h3>UNDERSTAND</h3><p>Clarify inputs, outputs, constraints, edge cases and what actually needs to be optimized.</p></article>
+<article class="pattern"><b>02</b><h3>DECOMPOSE</h3><p>Break the problem into smaller pieces and identify patterns that make the solution tractable.</p></article>
+<article class="pattern"><b>03</b><h3>MODEL</h3><p>Choose the right data structure, abstraction or system boundary before rushing into implementation.</p></article>
+<article class="pattern"><b>04</b><h3>IMPLEMENT</h3><p>Translate the mental model into clear C++ while keeping correctness visible in the code.</p></article>
+<article class="pattern"><b>05</b><h3>OPTIMIZE</h3><p>Revisit time, space, concurrency and resource trade-offs after establishing correctness.</p></article>
+<article class="pattern"><b>06</b><h3>VERIFY</h3><p>Test edge cases and reason about failure modes instead of assuming the happy path is enough.</p></article>
+</div></div></section>
+<section class="content-section"><div class="container content-grid">
+<div class="section-label">03 / CORE AREAS</div><div>
+<p class="statement">DATA STRUCTURES.<br><span class="muted">ALGORITHMS. COMPLEXITY.</span></p>
+<p class="body-copy" style="margin-top:35px">My problem-solving practice is centered on DSA in C++, with emphasis on understanding why an approach works and how its complexity behaves—not just memorizing implementations.</p>
+<a class="button button-primary interactive" href="skills.html" data-page-link style="margin-top:32px">Explore technical skills <span>↗</span></a>
+</div></div></section>
+</main>
+<script src="../js/theme.js"></script><script src="../js/navigation.js"></script><script src="../js/scroll.js"></script>
+<script src="../js/interactions.js"></script><script src="../js/page-transition.js"></script><script src="../js/app.js"></script>
+</body></html>

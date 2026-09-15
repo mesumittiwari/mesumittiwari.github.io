@@ -1,0 +1,166 @@
+
+/* Phase 11 — robust scaling and responsive layout */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%;height:auto}
+.container{min-width:0}
+
+.page-hero,.project-hero,.problem-hero,
+.page-hero .container,.project-hero .container,.problem-hero .container{
+  width:100%;min-width:0;max-width:100%;
+}
+.page-hero h1,.project-hero h1,.problem-hero h1,
+.statement,.big-metric-label,.body-copy,.lead{
+  max-width:100%;overflow-wrap:anywhere;
+}
+.page-hero h1{font-size:clamp(4rem,8.5vw,9.5rem);line-height:.82;letter-spacing:-.075em}
+.project-hero h1{font-size:clamp(4rem,11vw,12rem);line-height:.78;letter-spacing:-.085em}
+.problem-hero h1{font-size:clamp(4rem,10vw,10.5rem);line-height:.82;letter-spacing:-.075em}
+
+.big-metric{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px)}
+.big-metric>*{min-width:0}
+.big-metric-number{
+  min-width:0;width:100%;max-width:100%;
+  font-size:clamp(6rem,13vw,13.5rem);line-height:.78;
+  letter-spacing:-.085em;white-space:nowrap;
+}
+.big-metric-label{font-size:clamp(2rem,4vw,4.5rem)}
+
+.hero-grid,.process-grid,.flagship-content,.solve-grid,.knowledge-layout,
+.timeline-preview,.track-grid,.contact-inner{min-width:0}
+.hero-grid>*,.process-grid>*,.flagship-content>*,
+.solve-grid>*,.knowledge-layout>*,.track-stat{min-width:0}
+.hero-visual{min-width:0;max-width:100%;overflow:hidden}
+.skill-map,.architecture,.arch-canvas,.focus-card,.skill-list-card,
+.exp-card,.record,.pattern,.lesson,.explore-card,.tech-card{
+  min-width:0;max-width:100%;
+}
+.command,.tech-card,.lesson,.pattern{overflow-wrap:anywhere}
+
+@media(max-width:1100px){
+  :root{--gutter:clamp(24px,4vw,48px);--section-pad:clamp(90px,10vw,140px)}
+  .page-hero,.project-hero,.problem-hero{padding-top:145px}
+  .content-grid,.project-grid,.big-metric,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .big-metric{gap:48px;align-items:start}
+  .big-metric-number{width:fit-content;max-width:100%}
+  .record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:700px){
+  :root{--gutter:18px;--section-pad:76px}
+  .container{width:min(100%,calc(100% - 36px))}
+  .site-nav{height:68px;padding-inline:18px}
+  .page-hero,.project-hero,.problem-hero{min-height:auto;padding-top:132px;padding-bottom:64px}
+  .page-hero h1{font-size:clamp(3.5rem,15vw,6rem);line-height:.86}
+  .project-hero h1{font-size:clamp(3.5rem,18vw,7rem);line-height:.8}
+  .problem-hero h1{font-size:clamp(3.5rem,17vw,6.8rem);line-height:.84}
+  .page-hero .lead,.project-summary,.problem-hero .lead{margin-top:28px;font-size:.92rem;line-height:1.7}
+  .content-section{padding-block:72px}
+  .content-grid,.project-grid,.big-metric,.contact-grid,.skill-section-grid,.focus-grid{
+    grid-template-columns:minmax(0,1fr);gap:32px
+  }
+  .big-metric{gap:30px}
+  .big-metric-number{font-size:clamp(5.8rem,27vw,9rem);line-height:.8}
+  .big-metric-label{font-size:clamp(2rem,10vw,4rem);line-height:.92}
+  .record-grid{grid-template-columns:minmax(0,1fr);margin-top:48px}
+  .record{min-height:170px}
+  .record strong{font-size:clamp(3.2rem,15vw,5.5rem)}
+  .skill-map{min-height:520px}
+  .skill-core{width:125px;height:125px}
+  .skill-node{max-width:38%;overflow-wrap:anywhere}
+  .skill-node:before{display:none}
+  .rule-item{grid-template-columns:52px minmax(0,1fr);gap:16px}
+  .exp-block{grid-template-columns:minmax(0,1fr)}
+  .footer-mini{flex-direction:column}
+
+  .hero-grid,.process-grid,.solve-grid,.knowledge-layout{
+    grid-template-columns:minmax(0,1fr);gap:42px
+  }
+  .hero-copy h1{font-size:clamp(3.2rem,15vw,5.7rem)}
+  .hero-actions,.contact-actions{flex-wrap:wrap;gap:10px}
+  .hero-visual{min-height:340px;transform:none}
+  .system-orbit{transform:scale(.72) rotate(-18deg)}
+  .orbit-two{transform:scale(.72) rotate(52deg)}
+  .process-steps{grid-template-columns:minmax(0,1fr)}
+  .process-step{min-height:88px;border-left:1px solid var(--border)!important}
+  .knowledge-primary h2{font-size:clamp(5.5rem,27vw,10rem)}
+  .track-grid{grid-template-columns:minmax(0,1fr)}
+  .contact-inner h2{font-size:clamp(3.5rem,16vw,7rem)}
+}
+@media(max-width:380px){
+  .big-metric-number{font-size:clamp(5rem,25vw,7rem)}
+  .hero-copy h1{font-size:clamp(2.9rem,14vw,4.5rem)}
+  .problem-hero h1,.project-hero h1,.page-hero h1{font-size:clamp(3rem,16vw,5.2rem)}
+}
+
+/* ================================================================
+   PHASE 12 — DEDICATED PAGE CONTENT RAIL
+   Keep every page's content inside the same deliberate horizontal
+   grid as the navigation/back control. This fixes edge-to-edge
+   dedicated-page headings and copy at desktop/tablet widths.
+   ================================================================ */
+
+.container {
+  width: min(100% - (var(--gutter) * 2), 1440px);
+  max-width: 1440px;
+  margin-inline: auto;
+  min-width: 0;
+}
+
+.page-hero .container,
+.project-hero .container,
+.problem-hero .container {
+  width: min(100% - (var(--gutter) * 2), 1440px);
+  max-width: 1440px;
+  margin-inline: auto;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .container,
+  .page-hero .container,
+  .project-hero .container,
+  .problem-hero .container {
+    width: min(100% - (var(--gutter) * 2), 100%);
+  }
+}
+
+@media (max-width: 700px) {
+  .container,
+  .page-hero .container,
+  .project-hero .container,
+  .problem-hero .container {
+    width: calc(100% - 36px);
+    margin-inline: auto;
+  }
+}
+
+/* Keep the fixed back control aligned to the same content rail. */
+.back-link {
+  left: max(var(--gutter), calc((100vw - 1440px) / 2));
+}
+
+@media (max-width: 700px) {
+  .back-link {
+    left: 18px;
+  }
+}
+
+/* Phase 13 — prevent large editorial hero words from colliding */
+.page-hero h1,
+.project-hero h1,
+.problem-hero h1 {
+  line-height: .88;
+  overflow: visible;
+}
+.page-hero h1 .muted,
+.project-hero h1 .muted,
+.problem-hero h1 .muted {
+  display: block;
+}
+@media (max-width:700px) {
+  .page-hero h1,
+  .project-hero h1,
+  .problem-hero h1 {
+    line-height: .91;
+  }
+}

@@ -77,9 +77,79 @@ img,svg,video,canvas{max-width:100%;height:auto}
   }
   .hero-copy h1{font-size:clamp(3.2rem,15vw,5.7rem)}
   .hero-actions,.contact-actions{flex-wrap:wrap;gap:10px}
-  .hero-visual{min-height:340px;transform:none}
-  .system-orbit{transform:scale(.72) rotate(-18deg)}
-  .orbit-two{transform:scale(.72) rotate(52deg)}
+  .hero-visual{
+  min-height:410px;
+  height:410px;
+  margin-top:10px;
+  transform:none;
+  overflow:hidden;
+}
+
+.system-orbit{
+  transform:scale(.68) rotate(-18deg);
+}
+
+.orbit-two{
+  transform:scale(.66) rotate(52deg);
+}
+
+.system-node{
+  width:108px;
+  height:68px;
+  padding:0 12px;
+}
+
+.node-input{
+  left:2%;
+  top:17%;
+}
+
+.node-process{
+  right:2%;
+  top:7%;
+}
+
+.node-system{
+  left:10%;
+  bottom:15%;
+}
+
+.node-output{
+  right:10%;
+  bottom:25%;
+}
+
+.line-a{
+  width:180px;
+  left:24%;
+  top:36%;
+}
+
+.line-b{
+  width:150px;
+  left:34%;
+  top:52%;
+}
+
+.line-c{
+  width:130px;
+  left:28%;
+  top:62%;
+}
+
+.visual-caption{
+  left:6%;
+  right:6%;
+  bottom:4px;
+  gap:12px;
+  align-items:flex-end;
+  font-size:.48rem;
+  line-height:1.45;
+}
+
+.visual-caption span:last-child{
+  text-align:right;
+}
   .process-steps{grid-template-columns:minmax(0,1fr)}
   .process-step{min-height:88px;border-left:1px solid var(--border)!important}
   .knowledge-primary h2{font-size:clamp(5.5rem,27vw,10rem)}
@@ -90,6 +160,35 @@ img,svg,video,canvas{max-width:100%;height:auto}
   .big-metric-number{font-size:clamp(5rem,25vw,7rem)}
   .hero-copy h1{font-size:clamp(2.9rem,14vw,4.5rem)}
   .problem-hero h1,.project-hero h1,.page-hero h1{font-size:clamp(3rem,16vw,5.2rem)}
+  .hero-visual{
+  min-height:380px;
+  height:380px;
+}
+
+.system-node{
+  width:100px;
+  height:64px;
+}
+
+.node-input{
+  left:0;
+}
+
+.node-process{
+  right:0;
+}
+
+.node-system{
+  left:7%;
+}
+
+.node-output{
+  right:7%;
+}
+
+.visual-caption{
+  font-size:.44rem;
+}
 }
 
 /* ================================================================
